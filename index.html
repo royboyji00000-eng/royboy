@@ -1,0 +1,889 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <meta name="theme-color" content="#090014">
+
+    <title>Happy Birthday 🎂</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect"
+          href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap"
+          rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body>
+
+
+<!-- =====================================================
+     DESKTOP MOBILE VIEW WRAPPER
+====================================================== -->
+
+<div class="mobile-view">
+
+
+    <!-- =====================================
+         INTRO / SURPRISE SCREEN
+    ====================================== -->
+
+    <section id="intro" class="intro">
+
+        <div class="intro-glow glow-one"></div>
+        <div class="intro-glow glow-two"></div>
+
+        <div class="intro-content">
+
+            <div class="gift-box">
+                🎁
+            </div>
+
+            <div class="intro-stars">
+                ✨ ✦ ✨
+            </div>
+
+            <h1>
+                Hey Beautiful Queen! 👑💕
+                <br>
+                <span>Today Is All About You... 🎂✨</span>
+            </h1>
+
+            <p>
+                A little surprise is waiting for you... 💝
+                <br>
+                <span>
+                    Because today, the most beautiful queen
+                    deserves to be celebrated! 🌸✨
+                </span>
+            </p>
+
+            <button
+                id="openBtn"
+                class="open-btn"
+                type="button">
+
+                <span>
+                    Open Your Surprise
+                </span>
+
+                <span class="button-sparkle">
+                    ✨
+                </span>
+
+            </button>
+
+            <div class="tap-text">
+                Tap to open your birthday surprise 💖
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+
+    <!-- =====================================
+         MAIN BIRTHDAY PAGE
+    ====================================== -->
+
+    <main
+        id="birthdayPage"
+        class="birthday-page">
+
+
+        <!-- Background -->
+
+        <div class="background-glow glow-left"></div>
+
+        <div class="background-glow glow-right"></div>
+
+
+
+        <!-- Floating Balloons -->
+
+        <div class="balloons">
+
+            <div class="balloon balloon-one">
+                🎈
+            </div>
+
+            <div class="balloon balloon-two">
+                🎈
+            </div>
+
+            <div class="balloon balloon-three">
+                🎈
+            </div>
+
+            <div class="balloon balloon-four">
+                🎈
+            </div>
+
+            <div class="balloon balloon-five">
+                🎈
+            </div>
+
+        </div>
+
+
+
+        <!-- Main Content -->
+
+        <div class="content">
+
+
+            <div class="top-sparkles">
+                ✨ ✦ ✨ ✦ ✨
+            </div>
+
+
+            <p class="small-title">
+                Today is your special day
+            </p>
+
+
+            <h1 class="birthday-title">
+                Happy Birthday
+            </h1>
+
+
+            <h2 class="name">
+
+                <span id="nameText"></span>
+
+                <span class="cursor">
+                    |
+                </span>
+
+            </h2>
+
+
+
+            <!-- =================================
+                 CAKE
+            ================================== -->
+
+            <div class="cake-area">
+
+                <div class="cake">
+
+
+                    <!-- Candles -->
+
+                    <div class="candle candle-one">
+                        <div class="flame"></div>
+                    </div>
+
+                    <div class="candle candle-two">
+                        <div class="flame"></div>
+                    </div>
+
+                    <div class="candle candle-three">
+                        <div class="flame"></div>
+                    </div>
+
+
+
+                    <!-- Cake -->
+
+                    <div class="cake-top">
+
+                        <div class="cream cream-one"></div>
+
+                        <div class="cream cream-two"></div>
+
+                        <div class="cream cream-three"></div>
+
+                    </div>
+
+
+                    <div class="cake-middle"></div>
+
+
+                    <div class="cake-bottom">
+
+                        <div class="cake-decoration"></div>
+
+                        <div class="cake-decoration"></div>
+
+                        <div class="cake-decoration"></div>
+
+                        <div class="cake-decoration"></div>
+
+                    </div>
+
+
+                    <!-- Plate -->
+
+                    <div class="plate"></div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- =================================
+                 MESSAGE
+            ================================== -->
+
+            <div class="message-box">
+
+                <p
+                    id="messageText"
+                    class="message">
+                </p>
+
+            </div>
+
+
+
+            <!-- =================================
+                 PHOTO
+            ================================== -->
+
+            <section class="photo-section">
+
+                <div class="photo-frame">
+
+                    <img
+                        src="./mphoto.jpg"
+                        alt="Birthday Photo"
+                        id="birthdayPhoto">
+
+                </div>
+
+            </section>
+
+
+
+            <!-- =================================
+                 WISH CARDS
+            ================================== -->
+
+            <section class="wishes">
+
+
+                <div class="wish-card">
+
+                    <div class="wish-icon">
+                        ❤️
+                    </div>
+
+                    <h3>
+                        Lots of Happiness
+                    </h3>
+
+                    <p>
+                        May your life always be filled
+                        with happiness, love and beautiful
+                        moments.
+                    </p>
+
+                </div>
+
+
+
+                <div class="wish-card">
+
+                    <div class="wish-icon">
+                        🌟
+                    </div>
+
+                    <h3>
+                        Beautiful Dreams
+                    </h3>
+
+                    <p>
+                        May all your dreams come true
+                        and every new day bring something
+                        amazing.
+                    </p>
+
+                </div>
+
+
+
+                <div class="wish-card">
+
+                    <div class="wish-icon">
+                        🎁
+                    </div>
+
+                    <h3>
+                        Special Moments
+                    </h3>
+
+                    <p>
+                        Wishing you countless memories
+                        that you will cherish forever.
+                    </p>
+
+                </div>
+
+            </section>
+
+
+
+
+            <!-- =================================
+     12 PHOTO GALLERY
+================================== -->
+
+<section class="twelve-photo-gallery">
+
+    <!-- GALLERY HEADING -->
+    <div class="memories-heading">
+        <h2>Beautiful Memories</h2>
+        <p>Some beautiful, unforgettable moments for you...</p>
+    </div>
+
+    <div class="twelve-photo-container">
+
+        <!-- ROW 1 -->
+
+        <div class="twelve-photo-frame">
+            <img src="1.jpeg" alt="Memory 1">
+        </div>
+
+        <div class="twelve-photo-frame">
+            <img src="2.jpeg" alt="Memory 2">
+        </div>
+
+        <div class="twelve-photo-frame">
+            <img src="3.jpeg" alt="Memory 3">
+        </div>
+
+        <div class="twelve-photo-frame">
+            <img src="4.jpeg" alt="Memory 4">
+        </div>
+
+        <div class="twelve-photo-frame">
+            <img src="5.jpeg" alt="Memory 5">
+        </div>
+
+        <div class="twelve-photo-frame">
+            <img src="6.jpeg" alt="Memory 6">
+        </div>
+
+
+        <!-- ROW 2 -->
+
+        <div class="twelve-photo-frame">
+            <img src="7.jpeg" alt="Memory 7">
+        </div>
+
+        <div class="twelve-photo-frame">
+            <img src="8.jpeg" alt="Memory 8">
+        </div>
+
+        <div class="twelve-photo-frame">
+            <img src="9.jpeg" alt="Memory 9">
+        </div>
+
+        <div class="twelve-photo-frame">
+            <img src="10.jpeg" alt="Memory 10">
+        </div>
+
+        <div class="twelve-photo-frame">
+            <img src="11.jpeg" alt="Memory 11">
+        </div>
+
+        <div class="twelve-photo-frame">
+            <img src="12.jpeg" alt="Memory 12">
+        </div>
+
+    </div>
+
+</section>
+
+
+            <!-- =================================
+                 FINAL MESSAGE
+            ================================== -->
+
+            <section class="final-message">
+
+                <div class="big-heart">
+                    💖
+                </div>
+
+                <p class="final-small">
+                    Once Again...
+                </p>
+
+                <h2>
+                    Happy Birthday!
+                </h2>
+
+                <p class="final-text">
+
+                    Keep smiling, keep shining and keep
+                    being the wonderful person you are.
+                    May your coming year be full of
+                    happiness, success and beautiful
+                    memories. ✨
+
+                </p>
+
+
+                <button
+                    id="celebrateBtn"
+                    class="celebrate-btn"
+                    type="button">
+
+                    अब आप पार्टी के बारे में बताओ 😜
+
+                </button>
+
+            </section>
+
+        </div>
+
+    </main>
+
+
+
+    <!-- =========================================
+         PARTY QUESTION SCREEN
+    ========================================= -->
+
+    <section
+        id="partyQuestion"
+        class="question-screen">
+
+        <div class="question-box">
+
+            <div class="question-emoji">
+                🎉
+            </div>
+
+            <h1>
+                आप हमलोगो को पार्टी देंगे ना ?? 😍
+            </h1>
+
+            <p>
+                Birthday है तो पार्टी बनती है! ❤️
+            </p>
+
+            <div class="question-buttons">
+
+                <button
+                    id="yesPartyBtn"
+                    class="yes-btn"
+                    type="button">
+
+                    ❤️ हाँ
+
+                </button>
+
+
+                <button
+                    id="noPartyBtn"
+                    class="no-btn"
+                    type="button">
+
+                    😜 नहीं
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================================
+         PARTY PLACE SCREEN
+    ========================================= -->
+
+    <section
+        id="partyPlace"
+        class="question-screen">
+
+        <div class="question-box">
+
+            <div class="question-emoji">
+                🍽️
+            </div>
+
+            <h1>
+                आप Birthday पार्टी कहां देना चाहती है? 😍
+            </h1>
+
+            <p>
+                बताइये... Birthday पार्टी देने का प्लान कहां बनाएं? 🎂
+            </p>
+
+            <div class="question-buttons">
+
+                <button
+                    id="cafeBtn"
+                    class="place-btn"
+                    type="button">
+
+                    ☕ CAFE
+
+                </button>
+
+
+                <button
+                    id="restaurantBtn"
+                    class="place-btn"
+                    type="button">
+
+                    🍽️ RESTAURANT
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================================
+         PARTY FOOD SCREEN
+    ========================================= -->
+
+    <section
+        id="partyFood"
+        class="question-screen">
+
+        <div class="question-box">
+
+            <div class="question-emoji">
+                🍕
+            </div>
+
+            <h1>
+                पार्टी में क्या खिलाओगी? 😍
+            </h1>
+
+            <p>
+                Pizza ya Biryani? 🍕🍛
+            </p>
+
+            <div class="question-buttons">
+
+                <button
+                    id="pizzaBtn"
+                    class="place-btn"
+                    type="button">
+
+                    🍕 PIZZA
+
+                </button>
+
+
+                <button
+                    id="biryaniBtn"
+                    class="place-btn"
+                    type="button">
+
+                    🍛 BIRYANI
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================================
+         PARTY DRINK SCREEN
+    ========================================= -->
+
+    <section
+        id="partyDrink"
+        class="question-screen">
+
+        <div class="question-box">
+
+            <div class="question-emoji">
+                🥤
+            </div>
+
+            <h1>
+                Birthday पार्टी में पीने के लिए क्या मिलेगा? 😍
+            </h1>
+
+            <p>
+                Biryani ke saath drink bhi toh chahiye! 😋
+            </p>
+
+            <div class="question-buttons">
+
+                <button
+                    id="coldDrinkBtn"
+                    class="place-btn"
+                    type="button">
+
+                    🥤 COLD DRINK
+
+                </button>
+
+
+                <button
+                    id="whiskyBtn"
+                    class="place-btn"
+                    type="button">
+
+                    🥃 WHISKY
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================================
+         DON'T LAUGH SCREEN
+    ========================================= -->
+
+    <section
+        id="dontLaughScreen"
+        class="question-screen">
+
+        <div class="question-box">
+
+            <div class="question-emoji">
+                😜
+            </div>
+
+            <h1>
+                आप हंसुंगी मत करो ! 😂
+            </h1>
+
+            <p>
+                Bas hasna mana hai! 😏❤️
+            </p>
+
+            <div class="question-buttons">
+
+                <button
+                    id="dontLaughBtn"
+                    class="place-btn"
+                    type="button">
+
+                    क्योंकि...😂
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================================
+         MANGO SCREEN
+    ========================================= -->
+
+    <section
+        id="mangoScreen"
+        class="question-screen">
+
+        <div class="question-box">
+
+            <div class="question-emoji">
+                🍲
+            </div>
+
+            <h1>
+                क्योंकि.. आपको पीली दाल पसंद है 🍲
+            </h1>
+
+            <p>
+                Sach-sach batana! 😄
+            </p>
+
+            <div class="question-buttons">
+
+                <button
+                    id="mangoBtn"
+                    class="place-btn"
+                    type="button">
+
+                    🍲 है ना..?
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================================
+         BYE BYE SCREEN
+    ========================================= -->
+
+    <section
+        id="byeScreen"
+        class="question-screen">
+
+        <div class="question-box">
+
+            <div class="question-emoji">
+                👋
+            </div>
+
+            <h1>
+                आपका Birthday Gift आगे है।🎁
+            </h1>
+
+            <p>
+                Birthday है, तो Gift देना तो बनता है। 🎁
+            </p>
+
+            <div class="question-buttons">
+
+                <button
+                    id="goFirstScreenBtn"
+                    class="place-btn"
+                    type="button">
+
+                    देखिये मत, ले लीजिए।
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================================
+     GIFT / MONEY / CHOCOLATE RAIN SCREEN
+========================================= -->
+
+<section
+    id="giftRainScreen"
+    class="gift-rain-screen">
+
+    <!-- Falling Gifts / Money / Chocolates -->
+    <div id="giftRainContainer"></div>
+
+
+     <!-- Happy Birthday Audio -->
+    <audio
+        id="giftRainAudio"
+        src="happybd.mp3"
+        preload="auto"
+        loop>
+    </audio>
+
+    <!-- Only Button -->
+    <button
+        id="giftRainNextBtn"
+        class="place-btn"
+        type="button">
+
+        आगे और भी Surprise ❤️
+
+    </button>
+
+</section>
+
+
+
+
+    <!-- =========================================
+     FINAL PARTY SCREEN
+========================================= -->
+
+<section
+    id="partyFinal"
+    class="question-screen">
+
+    <div class="question-box final-party-box">
+
+        <div class="question-emoji">
+            🥳
+        </div>
+
+        <h1 id="finalPartyTitle">
+            Party Confirmed! 🎉
+        </h1>
+
+        <p id="finalPartyText">
+            अब Birthday पार्टी का इंतज़ार रहेगा...?? 🥳🎉
+        </p>
+
+        <div class="final-party-icons">
+            🎂 ❤️ 🎉 🥳 🎁
+        </div>
+
+        <div class="question-buttons">
+
+            <button
+                id="backHomeBtn"
+                class="place-btn final-home-btn"
+                type="button">
+
+                🎊 Celebrate Again
+
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- =========================================
+     EFFECT CONTAINERS
+========================================= -->
+
+<div id="confetti-container"></div>
+
+<div id="fireworks-container"></div>
+
+
+
+<!-- =====================================
+     JAVASCRIPT
+===================================== -->
+
+<script src="script.js"></script>
+
+
+</body>
+
+</html>

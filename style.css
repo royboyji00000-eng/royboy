@@ -1,0 +1,3494 @@
+
+/* =========================================
+   RESET
+========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    background: #090014;
+    color: #ffffff;
+    overflow-x: hidden;
+}
+
+
+/* =========================================
+   INTRO
+========================================= */
+
+.intro {
+    position: fixed;
+    inset: 0;
+    width: 100%;
+    height: 100vh;
+    min-height: 100dvh;
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    overflow: hidden;
+
+    background:
+        radial-gradient(
+            circle at 50% 45%,
+            #4d0872 0%,
+            #210035 35%,
+            #0c0014 75%,
+            #050008 100%
+        );
+
+    opacity: 1;
+    visibility: visible;
+    transform: scale(1);
+
+    transition:
+        opacity 1s ease,
+        visibility 1s ease,
+        transform 1s ease;
+}
+
+.intro.hide {
+    opacity: 0;
+    visibility: hidden;
+    transform: scale(1.15);
+    pointer-events: none;
+}
+
+
+/* =========================================
+   INTRO GLOW
+========================================= */
+
+.intro-glow {
+    position: absolute;
+    width: 350px;
+    height: 350px;
+    border-radius: 50%;
+    filter: blur(80px);
+    opacity: 0.35;
+    pointer-events: none;
+}
+
+.glow-one {
+    background: #ff1493;
+    top: -120px;
+    left: -100px;
+
+    animation:
+        glowMoveOne 6s ease-in-out infinite;
+}
+
+.glow-two {
+    background: #7b2cff;
+    right: -120px;
+    bottom: -120px;
+
+    animation:
+        glowMoveTwo 7s ease-in-out infinite;
+}
+
+
+/* =========================================
+   INTRO CONTENT
+========================================= */
+
+.intro-content {
+    position: relative;
+    z-index: 10;
+    width: 90%;
+    max-width: 700px;
+
+    animation:
+        introFloat 3s ease-in-out infinite;
+}
+
+
+/* =========================================
+   GIFT
+========================================= */
+
+.gift-box {
+    font-size: 95px;
+    margin-bottom: 20px;
+    display: inline-block;
+
+    animation:
+        giftBounce 1.5s ease-in-out infinite,
+        giftGlow 2s ease-in-out infinite alternate;
+}
+
+.intro-stars {
+    font-size: 16px;
+    color: #ffd6fa;
+    letter-spacing: 10px;
+    margin-bottom: 15px;
+
+    animation:
+        starsPulse 2s infinite;
+}
+
+.intro h1 {
+    font-family: "Dancing Script", cursive;
+    font-size: clamp(36px, 6vw, 50px);
+    line-height: 1.1;
+    margin-bottom: 18px;
+    color: #ffffff;
+
+    text-shadow:
+        0 0 20px rgba(255, 90, 210, 0.5),
+        0 0 50px rgba(255, 0, 170, 0.25);
+}
+
+.intro p {
+    font-size: 16px;
+    color: #e8cfff;
+    margin-bottom: 35px;
+}
+
+
+/* =========================================
+   OPEN BUTTON
+========================================= */
+
+.open-btn {
+    position: relative;
+    z-index: 100;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+
+    min-width: 230px;
+    padding: 16px 30px;
+
+    border: none;
+    outline: none;
+    border-radius: 50px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #ff1493,
+            #8a2be2
+        );
+
+    color: #ffffff;
+
+    font-family:
+        "Poppins",
+        sans-serif;
+
+    font-size: 16px;
+    font-weight: 600;
+
+    cursor: pointer;
+    user-select: none;
+
+    -webkit-tap-highlight-color: transparent;
+
+    box-shadow:
+        0 0 20px rgba(255, 20, 147, 0.5);
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.open-btn:hover {
+    transform:
+        translateY(-5px)
+        scale(1.04);
+
+    box-shadow:
+        0 0 40px rgba(255, 20, 147, 0.8);
+}
+
+.open-btn:active {
+    transform: scale(0.96);
+}
+
+.button-sparkle {
+    animation:
+        sparkleRotate 1.2s linear infinite;
+}
+
+.tap-text {
+    margin-top: 20px;
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0.5);
+
+    animation:
+        fadeText 2s infinite;
+}
+
+
+/* =========================================
+   BIRTHDAY PAGE
+========================================= */
+
+.birthday-page {
+    position: relative;
+    min-height: 100vh;
+
+    padding:
+        20px 20px
+        60px;
+
+    overflow: hidden;
+
+    background:
+        radial-gradient(
+            circle at 20% 20%,
+            rgba(255, 0, 149, 0.18),
+            transparent 30%
+        ),
+
+        radial-gradient(
+            circle at 80% 30%,
+            rgba(89, 0, 255, 0.2),
+            transparent 30%
+        ),
+
+        linear-gradient(
+            135deg,
+            #090014,
+            #170025,
+            #08000e
+        );
+}
+
+
+/* =========================================
+   BACKGROUND GLOW
+========================================= */
+
+.background-glow {
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    border-radius: 50%;
+    filter: blur(120px);
+    opacity: 0.15;
+    pointer-events: none;
+}
+
+.glow-left {
+    background: #ff1493;
+    left: -200px;
+    top: 200px;
+}
+
+.glow-right {
+    background: #6c2cff;
+    right: -200px;
+    top: 700px;
+}
+
+
+/* =========================================
+   CONTENT
+========================================= */
+
+.content {
+    position: relative;
+    z-index: 10;
+    width: 100%;
+    max-width: 1100px;
+    margin: auto;
+    text-align: center;
+}
+
+.top-sparkles {
+    color: #ffc7f3;
+    font-size: 18px;
+    letter-spacing: 8px;
+    margin-bottom: 15px;
+
+    animation:
+        starsPulse 2s infinite;
+}
+
+.small-title {
+    color: #d9a7ff;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    font-size: 13px;
+    margin-bottom: 15px;
+}
+
+
+/* =========================================
+   BIRTHDAY TITLE
+========================================= */
+
+.birthday-title {
+    font-family:
+        "Dancing Script",
+        cursive;
+
+    font-size:
+        clamp(30px, 5vw, 45px);
+
+    line-height: 1;
+
+    background:
+        linear-gradient(
+            90deg,
+            #ff4ecd,
+            #ffffff,
+            #a66cff,
+            #ff4ecd
+        );
+
+    background-size: 300%;
+
+    -webkit-background-clip: text;
+    background-clip: text;
+
+    color: transparent;
+
+    animation:
+        gradientText 5s linear infinite;
+
+    text-shadow:
+        0 0 30px rgba(255, 40, 200, 0.3);
+}
+
+
+/* =========================================
+   NAME
+========================================= */
+
+.name {
+    font-family:
+        "Dancing Script",
+        cursive;
+
+    font-size:
+        clamp(30px, 5vw, 45px);
+
+    color: #ffd6f6;
+    margin-top: 15px;
+    min-height: 90px;
+
+    text-shadow:
+        0 0 20px rgba(255, 110, 210, 0.5);
+}
+
+
+/* =========================================
+   CAKE AREA
+========================================= */
+
+.cake-area {
+    position: relative;
+    width: 100%;
+    height: 135px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin: 3px 0;
+}
+
+
+/* =========================================
+   CAKE
+========================================= */
+
+.cake {
+    position: relative;
+    width: 100px;
+    height: 76px;
+    margin: 18px auto 0;
+
+    display: block;
+}
+
+
+/* =========================================
+   CAKE LAYERS
+========================================= */
+
+.cake-top,
+.cake-middle,
+.cake-bottom {
+    position: absolute;
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    border-radius: 6px;
+
+    background:
+        linear-gradient(
+            to bottom,
+            #ff9bdc,
+            #e83a9e
+        );
+
+    box-shadow:
+        0 3px 8px
+        rgba(255, 0, 149, 0.14);
+}
+
+
+/* =========================================
+   TOP LAYER
+========================================= */
+
+.cake-top {
+    width: 64px;
+    height: 18px;
+    bottom: 48px;
+
+    background:
+        linear-gradient(
+            to bottom,
+            #ffd0ed,
+            #ff6fc5
+        );
+
+    z-index: 2;
+
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    gap: 8px;
+}
+
+
+/* =========================================
+   MIDDLE LAYER
+========================================= */
+
+.cake-middle {
+    width: 82px;
+    height: 23px;
+    bottom: 27px;
+    z-index: 2;
+}
+
+
+/* =========================================
+   BOTTOM LAYER
+========================================= */
+
+.cake-bottom {
+    width: 100px;
+    height: 28px;
+    bottom: 0;
+    z-index: 2;
+}
+
+
+/* =========================================
+   CREAM
+========================================= */
+
+.cream {
+    position: relative;
+
+    left: auto !important;
+    right: auto !important;
+
+    width: 10px;
+    height: 6px;
+
+    flex: 0 0 10px;
+
+    margin: 0;
+
+    background: #fff4fc;
+
+    border-radius:
+        0 0 7px 7px;
+
+    bottom: 0;
+    z-index: 5;
+}
+
+
+/* =========================================
+   CREAM POSITION RESET
+========================================= */
+
+.cream-one,
+.cream-two,
+.cream-three {
+    left: auto !important;
+    right: auto !important;
+}
+
+
+/* =========================================
+   CAKE DECORATION
+========================================= */
+
+.cake-decoration {
+    position: absolute;
+
+    width: 5px;
+    height: 5px;
+
+    border-radius: 50%;
+
+    background: #ffd1ef;
+
+    top: 7px;
+    z-index: 4;
+}
+
+
+/* =========================================
+   DECORATIONS
+========================================= */
+
+.cake-decoration:nth-child(1) {
+    left: 13px;
+}
+
+.cake-decoration:nth-child(2) {
+    left: 34px;
+}
+
+.cake-decoration:nth-child(3) {
+    right: 34px;
+}
+
+.cake-decoration:nth-child(4) {
+    right: 13px;
+}
+
+
+/* =========================================
+   PLATE
+========================================= */
+
+.plate {
+    position: absolute;
+
+    width: 112px;
+    height: 8px;
+
+    left: 50%;
+    bottom: -5px;
+
+    transform: translateX(-50%);
+
+    border-radius: 50%;
+
+    background:
+        linear-gradient(
+            to bottom,
+            #ffffff,
+            #cfc7d7
+        );
+
+    box-shadow:
+        0 2px 7px
+        rgba(255, 255, 255, 0.10);
+
+    z-index: 1;
+}
+
+
+/* =========================================
+   CANDLES
+========================================= */
+
+.candle {
+    position: absolute;
+
+    bottom: 64px;
+
+    width: 6px;
+    height: 22px;
+
+    border-radius: 2px;
+
+    z-index: 5;
+
+    background:
+        repeating-linear-gradient(
+            45deg,
+            #ffffff 0px,
+            #ffffff 3px,
+            #ff58b8 3px,
+            #ff58b8 6px
+        );
+}
+
+
+/* =========================================
+   CANDLES - CENTERED
+========================================= */
+
+.candle-one {
+    left: 35px;
+}
+
+.candle-two {
+    left: 47px;
+}
+
+.candle-three {
+    left: 59px;
+}
+
+
+/* =========================================
+   FLAME
+========================================= */
+
+.flame {
+    position: absolute;
+
+    width: 8px;
+    height: 11px;
+
+    left: -1px;
+    top: -11px;
+
+    border-radius: 50%;
+
+    background:
+        linear-gradient(
+            to top,
+            #ff7b00,
+            #ffe600,
+            #ffffff
+        );
+
+    transform-origin: bottom;
+
+    animation:
+        flameAnimation
+        0.5s
+        ease-in-out
+        infinite alternate;
+
+    filter:
+        drop-shadow(
+            0 0 3px #ff9d00
+        );
+}
+
+
+/* =========================================
+   MESSAGE
+========================================= */
+
+.message-box {
+    max-width: 650px;
+
+    margin:
+        8px auto 40px;
+
+    min-height: 70px;
+}
+
+.message {
+    color: #eee;
+    line-height: 1.6;
+    font-size: 15px;
+}
+
+
+/* =========================================
+   PHOTO
+========================================= */
+
+.photo-section {
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin: 45px 0;
+}
+
+
+/* =========================================
+   PHOTO FRAME
+========================================= */
+
+.photo-frame {
+    position: relative;
+
+    width: 180px;
+    height: 180px;
+
+    padding: 8px;
+
+    border-radius: 50%;
+
+    background:
+        linear-gradient(
+            135deg,
+            #ff38b8,
+            #8c42ff,
+            #ff38b8
+        );
+
+    box-shadow:
+        0 0 20px rgba(255, 56, 184, 0.35),
+        0 0 40px rgba(140, 66, 255, 0.30);
+
+    animation:
+        photoGlow 3s ease-in-out infinite alternate;
+}
+
+
+/* =========================================
+   PHOTO IMAGE
+========================================= */
+
+.photo-frame img,
+#birthdayPhoto {
+    width: 100%;
+    height: 100%;
+
+    display: block !important;
+
+    object-fit: cover;
+
+    border-radius: 50%;
+
+    opacity: 1 !important;
+    visibility: visible !important;
+
+    background: #21002f;
+}
+
+
+/* =========================================
+   PHOTO GLOW ANIMATION
+========================================= */
+
+@keyframes photoGlow {
+
+    0% {
+        transform: scale(1);
+
+        box-shadow:
+            0 0 20px rgba(255, 56, 184, 0.35),
+            0 0 40px rgba(140, 66, 255, 0.25);
+    }
+
+    100% {
+        transform: scale(1.04);
+
+        box-shadow:
+            0 0 35px rgba(255, 56, 184, 0.65),
+            0 0 60px rgba(140, 66, 255, 0.50);
+    }
+}
+
+
+/* =========================================
+   WISH CARDS
+========================================= */
+
+.wishes {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 12px;
+
+    margin: 30px 0;
+}
+
+.wish-card {
+    padding:
+        13px 12px;
+
+    border-radius: 16px;
+
+    background:
+        rgba(255, 255, 255, 0.05);
+
+    border:
+        1px solid
+        rgba(255, 255, 255, 0.1);
+
+    backdrop-filter: blur(15px);
+
+    transition:
+        transform 0.4s ease,
+        background 0.4s ease,
+        box-shadow 0.4s ease;
+}
+
+.wish-card:hover {
+    transform:
+        translateY(-5px);
+
+    background:
+        rgba(255, 255, 255, 0.09);
+
+    box-shadow:
+        0 10px 25px
+        rgba(255, 0, 179, 0.15);
+}
+
+.wish-icon {
+    font-size: 28px;
+    margin-bottom: 5px;
+
+    animation:
+        iconFloat 2.5s
+        ease-in-out
+        infinite;
+}
+
+.wish-card h3 {
+    font-size: 15px;
+    margin-bottom: 5px;
+}
+
+.wish-card p {
+    color: #cfc2d5;
+    line-height: 1.4;
+    font-size: 12px;
+}
+
+
+/* =========================================
+   FINAL MESSAGE
+========================================= */
+
+.final-message {
+    padding:
+        25px 12px
+        45px;
+
+    margin-top: 15px;
+}
+
+.big-heart {
+    font-size: 40px;
+
+    animation:
+        heartbeat 1.2s
+        infinite;
+}
+
+.final-small {
+    color: #cba6ff;
+    margin-top: 7px;
+    font-size: 12px;
+}
+
+.final-message h2 {
+    font-family:
+        "Dancing Script",
+        cursive;
+
+    font-size:
+        clamp(32px, 5vw, 52px);
+
+    color: #ff7ad5;
+
+    margin:
+        3px 0 10px;
+
+    text-shadow:
+        0 0 15px
+        rgba(255, 70, 190, 0.35);
+}
+
+.final-text {
+    max-width: 500px;
+
+    margin:
+        0 auto
+        15px;
+
+    line-height: 1.5;
+
+    color: #d4c6db;
+
+    font-size: 12px;
+}
+
+
+/* =========================================
+   CELEBRATE BUTTON
+========================================= */
+
+.celebrate-btn {
+    border: none;
+
+    padding:
+        15px 30px;
+
+    border-radius: 50px;
+
+    color: #ffffff;
+
+    background:
+        linear-gradient(
+            135deg,
+            #ff1493,
+            #8a2be2
+        );
+
+    font-family:
+        "Poppins",
+        sans-serif;
+
+    font-size: 16px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 0 25px
+        rgba(255, 20, 147, 0.45);
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.celebrate-btn:hover {
+    transform:
+        translateY(-5px)
+        scale(1.05);
+
+    box-shadow:
+        0 0 40px
+        rgba(255, 20, 147, 0.8);
+}
+
+
+/* =========================================
+   BALLOONS
+========================================= */
+
+.balloons {
+    position: fixed;
+    inset: 0;
+    z-index: 2;
+
+    pointer-events: none;
+    overflow: hidden;
+}
+
+.balloon {
+    position: absolute;
+
+    bottom: -100px;
+
+    font-size: 45px;
+    opacity: 0.75;
+
+    animation:
+        balloonFloat
+        10s
+        linear
+        infinite;
+}
+
+.balloon-one {
+    left: 5%;
+}
+
+.balloon-two {
+    left: 25%;
+    animation-delay: 2s;
+}
+
+.balloon-three {
+    left: 50%;
+    animation-delay: 4s;
+}
+
+.balloon-four {
+    left: 75%;
+    animation-delay: 1s;
+}
+
+.balloon-five {
+    left: 90%;
+    animation-delay: 5s;
+}
+
+
+/* =========================================
+   CONFETTI
+========================================= */
+
+#confetti-container {
+    position: fixed;
+    inset: 0;
+
+    z-index: 10000;
+
+    pointer-events: none;
+    overflow: hidden;
+}
+
+.confetti {
+    position: fixed;
+
+    top: -30px;
+
+    width: 9px;
+    height: 18px;
+
+    z-index: 10000;
+
+    pointer-events: none;
+
+    animation:
+        confettiFall
+        linear
+        forwards;
+}
+
+
+/* =========================================
+   HEARTS COMPLETELY DISABLED
+========================================= */
+
+#hearts-container,
+.floating-heart,
+.heart {
+    display: none !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+    pointer-events: none !important;
+}
+
+body.party-mode #hearts-container,
+body.party-mode .floating-heart,
+body.party-mode .heart {
+    display: none !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+}
+
+
+/* =========================================
+   PARTY MODE
+========================================= */
+
+body.party-mode #confetti-container,
+body.party-mode #fireworks-container {
+    display: none !important;
+}
+
+
+/* =========================================
+   QUESTION SCREEN
+========================================= */
+
+.question-screen {
+    position: fixed;
+    inset: 0;
+
+    width: 100%;
+    height: 100vh;
+    min-height: 100dvh;
+
+    z-index: 5000;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 20px;
+
+    text-align: center;
+
+    background:
+        radial-gradient(
+            circle at center,
+            #4d0872 0%,
+            #210035 40%,
+            #08000f 100%
+        );
+
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+
+    transform:
+        scale(1.08);
+
+    transition:
+        opacity 0.6s ease,
+        transform 0.6s ease,
+        visibility 0.6s ease;
+
+    overflow: hidden;
+}
+
+.question-screen.active {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+
+    transform:
+        scale(1);
+}
+
+
+/* =========================================
+   QUESTION BOX
+========================================= */
+
+.question-box {
+    position: relative;
+
+    width: 100%;
+    max-width: 650px;
+
+    max-height:
+        calc(100dvh - 30px);
+
+    padding:
+        55px 30px;
+
+    border-radius: 30px;
+
+    background:
+        rgba(255, 255, 255, 0.07);
+
+    border:
+        1px solid
+        rgba(255, 255, 255, 0.15);
+
+    backdrop-filter:
+        blur(20px);
+
+    box-shadow:
+        0 25px 80px
+        rgba(0, 0, 0, 0.4);
+
+    animation:
+        questionBoxIn
+        0.7s
+        ease;
+
+    overflow: hidden;
+
+    isolation: isolate;
+}
+
+
+/* =========================================
+   QUESTION EMOJI
+========================================= */
+
+.question-emoji {
+    font-size: 75px;
+    margin-bottom: 20px;
+
+    animation:
+        questionEmoji
+        1.5s
+        ease-in-out
+        infinite;
+}
+
+
+/* =========================================
+   QUESTION TITLE
+========================================= */
+
+.question-box h1 {
+    font-family:
+        "Dancing Script",
+        cursive;
+
+    font-size:
+        clamp(24px, 4vw, 35px);
+
+    line-height: 1.1;
+
+    color: #ffffff;
+
+    margin-bottom: 15px;
+
+    text-shadow:
+        0 0 25px
+        rgba(255, 80, 200, 0.5);
+}
+
+.question-box p {
+    color: #dfcce8;
+
+    font-size: 16px;
+    line-height: 1.7;
+
+    margin-bottom: 35px;
+}
+
+
+/* =========================================
+   BUTTON CONTAINER
+========================================= */
+
+.question-buttons {
+    position: static !important;
+
+    z-index: 20;
+
+    width: 100%;
+    min-height: 120px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 20px;
+
+    overflow: visible;
+}
+
+
+/* =========================================
+   ALL QUESTION BUTTONS
+========================================= */
+
+.question-buttons button {
+    position: relative;
+
+    min-width: 150px;
+
+    padding:
+        15px 25px;
+
+    border: none;
+    border-radius: 50px;
+
+    color: #ffffff;
+
+    font-family:
+        "Poppins",
+        sans-serif;
+
+    font-size: 16px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    user-select: none;
+    -webkit-user-select: none;
+
+    -webkit-tap-highlight-color: transparent;
+
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    flex-shrink: 0;
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+
+/* =========================================
+   YES BUTTON
+========================================= */
+
+.yes-btn {
+    position: relative;
+    z-index: 10;
+
+    background:
+        linear-gradient(
+            135deg,
+            #ff1493,
+            #ff4ecd
+        );
+
+    box-shadow:
+        0 0 25px
+        rgba(255, 20, 147, 0.5);
+}
+
+.yes-btn:hover {
+    transform:
+        scale(1.08);
+
+    box-shadow:
+        0 0 40px
+        rgba(255, 20, 147, 0.8);
+}
+
+
+/* =========================================
+   NO BUTTON - NORMAL
+========================================= */
+
+.no-btn {
+    position: relative;
+    z-index: 10;
+
+    display: inline-flex !important;
+
+    align-items: center;
+    justify-content: center;
+
+    min-width: 150px;
+
+    opacity: 1 !important;
+    visibility: visible !important;
+
+    background:
+        linear-gradient(
+            135deg,
+            #555,
+            #292929
+        );
+
+    box-shadow:
+        0 0 15px
+        rgba(0, 0, 0, 0.3);
+
+    cursor: pointer;
+
+    white-space: nowrap;
+
+    transform:
+        translate(0, 0);
+
+    transition:
+        left 0.18s ease,
+        top 0.18s ease,
+        transform 0.18s ease,
+        box-shadow 0.25s ease;
+}
+
+
+/* =========================================
+   NO BUTTON - MOVING
+========================================= */
+
+.no-btn.no-moving {
+    position: absolute !important;
+
+    z-index: 9999 !important;
+
+    display: inline-flex !important;
+
+    align-items: center;
+    justify-content: center;
+
+    opacity: 1 !important;
+    visibility: visible !important;
+
+    pointer-events: auto !important;
+
+    margin: 0 !important;
+
+    max-width:
+        calc(100% - 30px);
+
+    white-space: nowrap;
+
+    transition:
+        left 0.18s ease,
+        top 0.18s ease,
+        transform 0.18s ease;
+}
+
+
+/* =========================================
+   NO BUTTON PROTECTION
+========================================= */
+
+#noPartyBtn {
+    position: relative;
+
+    opacity: 1 !important;
+    visibility: visible !important;
+
+    display: inline-flex !important;
+
+    pointer-events: auto !important;
+}
+
+#noPartyBtn.no-moving {
+    position: absolute !important;
+
+    display: inline-flex !important;
+
+    z-index: 9999 !important;
+
+    opacity: 1 !important;
+    visibility: visible !important;
+
+    pointer-events: auto !important;
+
+    margin: 0 !important;
+
+    max-width:
+        calc(100% - 30px);
+}
+
+
+/* =========================================
+   PLACE BUTTON
+========================================= */
+
+.place-btn {
+    background:
+        linear-gradient(
+            135deg,
+            #8a2be2,
+            #ff1493
+        );
+
+    box-shadow:
+        0 0 25px
+        rgba(138, 43, 226, 0.5);
+}
+
+.place-btn:hover {
+    transform:
+        translateY(-5px)
+        scale(1.05);
+
+    box-shadow:
+        0 0 40px
+        rgba(138, 43, 226, 0.8);
+}
+
+
+/* =========================================
+   PARTY PLACE / FOOD / DRINK BOX
+========================================= */
+
+#partyPlace .question-box,
+#partyFood .question-box,
+#partyDrink .question-box {
+    position: relative !important;
+
+    overflow: hidden !important;
+
+    width: 100%;
+    max-width: 650px;
+
+    min-height: 380px;
+
+    max-height:
+        calc(100dvh - 30px);
+
+    isolation: isolate;
+}
+
+
+/* =========================================
+   RESTAURANT MOVING BUTTON
+========================================= */
+
+#partyPlace #restaurantBtn.restaurant-moving {
+    position: absolute !important;
+
+    z-index: 9999 !important;
+
+    display: inline-flex !important;
+
+    align-items: center;
+    justify-content: center;
+
+    margin: 0 !important;
+
+    visibility: visible !important;
+    opacity: 1 !important;
+
+    pointer-events: auto !important;
+
+    max-width:
+        calc(100% - 30px);
+
+    white-space: nowrap;
+
+    transition:
+        left 0.18s ease,
+        top 0.18s ease,
+        transform 0.18s ease;
+}
+
+
+/* =========================================
+   PIZZA MOVING BUTTON
+========================================= */
+
+#partyFood #pizzaBtn.pizza-moving {
+    position: absolute !important;
+
+    z-index: 9999 !important;
+
+    display: inline-flex !important;
+
+    align-items: center;
+    justify-content: center;
+
+    margin: 0 !important;
+
+    visibility: visible !important;
+    opacity: 1 !important;
+
+    pointer-events: auto !important;
+
+    max-width:
+        calc(100% - 30px);
+
+    white-space: nowrap;
+
+    transition:
+        left 0.18s ease,
+        top 0.18s ease,
+        transform 0.18s ease;
+}
+
+
+/* =========================================
+   WHISKY MOVING BUTTON
+========================================= */
+
+#partyDrink #whiskyBtn.whisky-moving {
+    position: absolute !important;
+
+    z-index: 9999 !important;
+
+    display: inline-flex !important;
+
+    align-items: center;
+    justify-content: center;
+
+    margin: 0 !important;
+
+    visibility: visible !important;
+    opacity: 1 !important;
+
+    pointer-events: auto !important;
+
+    max-width:
+        calc(100% - 30px);
+
+    white-space: nowrap;
+
+    box-sizing: border-box;
+
+    transition:
+        left 0.18s ease,
+        top 0.18s ease,
+        transform 0.18s ease;
+}
+
+
+/* =========================================
+   MOVING BUTTON HOVER
+========================================= */
+
+#partyPlace #restaurantBtn.restaurant-moving:hover,
+#partyFood #pizzaBtn.pizza-moving:hover,
+#partyDrink #whiskyBtn.whisky-moving:hover {
+    box-shadow:
+        0 0 30px
+        rgba(138, 43, 226, 0.7);
+}
+
+
+/* =========================================
+   MOVING BUTTON SAFETY
+========================================= */
+
+#partyPlace #restaurantBtn.restaurant-moving,
+#partyFood #pizzaBtn.pizza-moving,
+#partyDrink #whiskyBtn.whisky-moving,
+#noPartyBtn.no-moving {
+    max-width:
+        calc(100% - 30px);
+
+    box-sizing: border-box;
+
+    overflow: hidden;
+
+    text-overflow: ellipsis;
+}
+
+
+/* =========================================
+   COLD DRINK BUTTON
+========================================= */
+
+#partyDrink #coldDrinkBtn {
+    position: relative;
+
+    z-index: 20;
+
+    flex-shrink: 0;
+}
+
+
+/* =========================================
+   DRINK SCREEN EXTRA
+========================================= */
+
+#partyDrink .question-emoji {
+    animation:
+        questionEmoji
+        1.5s
+        ease-in-out
+        infinite;
+}
+
+#partyDrink .question-box {
+    min-height: 380px;
+}
+
+
+/* =========================================
+   NEW SCREENS
+   DON'T LAUGH / MANGO / BYE
+========================================= */
+
+#dontLaughScreen,
+#mangoScreen,
+#byeScreen {
+    z-index: 5000;
+}
+
+
+/* =========================================
+   NEW SCREEN BOX
+========================================= */
+
+#dontLaughScreen .question-box,
+#mangoScreen .question-box,
+#byeScreen .question-box {
+    position: relative;
+
+    width: 100%;
+    max-width: 650px;
+
+    min-height: 380px;
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+
+    overflow: hidden !important;
+}
+
+
+/* =========================================
+   DON'T LAUGH SCREEN
+========================================= */
+
+#dontLaughScreen {
+    background:
+        radial-gradient(
+            circle at center,
+            #5b087d 0%,
+            #25003b 40%,
+            #08000f 100%
+        );
+}
+
+#dontLaughScreen .question-emoji {
+    font-size: 80px;
+}
+
+#dontLaughScreen h1 {
+    color: #ffffff;
+
+    text-shadow:
+        0 0 25px
+        rgba(255, 80, 200, 0.6);
+}
+
+#dontLaughScreen p {
+    color: #dfcce8;
+}
+
+
+/* =========================================
+   MANGO SCREEN
+========================================= */
+
+#mangoScreen {
+    background:
+        radial-gradient(
+            circle at center,
+            #5c1470 0%,
+            #280038 40%,
+            #08000f 100%
+        );
+}
+
+#mangoScreen .question-emoji {
+    font-size: 80px;
+}
+
+#mangoScreen h1 {
+    color: #ffffff;
+
+    text-shadow:
+        0 0 25px
+        rgba(255, 190, 50, 0.45);
+}
+
+#mangoScreen p {
+    color: #dfcce8;
+}
+
+
+/* =========================================
+   BYE TEXT
+========================================= */
+
+.bye-text {
+    margin-top: 25px !important;
+    margin-bottom: 0 !important;
+
+    color: #ffb8e9 !important;
+
+    font-size: 18px !important;
+    font-weight: 500;
+
+    animation:
+        byePulse 1.8s ease-in-out infinite;
+}
+
+
+/* =========================================
+   BYE SCREEN
+========================================= */
+
+#byeScreen {
+    background:
+        radial-gradient(
+            circle at center,
+            #4d0872 0%,
+            #210035 40%,
+            #08000f 100%
+        );
+}
+
+#byeScreen .question-emoji {
+    font-size: 80px;
+}
+
+#byeScreen h1 {
+    color: #ffffff;
+
+    text-shadow:
+        0 0 25px
+        rgba(255, 80, 200, 0.6);
+}
+
+#byeScreen p {
+    color: #dfcce8;
+}
+
+
+/* =========================================
+   NEW SCREEN BUTTON
+========================================= */
+
+#dontLaughBtn,
+#mangoBtn,
+#goFirstScreenBtn {
+    position: relative;
+
+    z-index: 20;
+
+    min-width: 170px;
+
+    margin-top: 5px;
+}
+
+
+/* =========================================
+   FINAL PARTY
+========================================= */
+
+.final-party-box {
+    max-width: 700px;
+}
+
+.final-party-icons {
+    font-size: 32px;
+
+    letter-spacing: 8px;
+
+    margin:
+        25px 0 35px;
+
+    animation:
+        iconParty
+        2s
+        ease-in-out
+        infinite;
+}
+
+
+/* =========================================
+   ANIMATIONS
+========================================= */
+
+@keyframes introFloat {
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+@keyframes giftBounce {
+    0%,
+    100% {
+        transform:
+            translateY(0)
+            rotate(0deg);
+    }
+
+    50% {
+        transform:
+            translateY(-18px)
+            rotate(5deg);
+    }
+}
+
+@keyframes giftGlow {
+    from {
+        filter:
+            drop-shadow(
+                0 0 10px
+                rgba(255, 50, 190, 0.5)
+            );
+    }
+
+    to {
+        filter:
+            drop-shadow(
+                0 0 35px
+                rgba(255, 50, 190, 0.9)
+            );
+    }
+}
+
+@keyframes starsPulse {
+    0%,
+    100% {
+        opacity: 0.5;
+
+        transform:
+            scale(1);
+    }
+
+    50% {
+        opacity: 1;
+
+        transform:
+            scale(1.08);
+    }
+}
+
+@keyframes sparkleRotate {
+    0% {
+        transform:
+            rotate(0deg)
+            scale(1);
+    }
+
+    50% {
+        transform:
+            rotate(15deg)
+            scale(1.2);
+    }
+
+    100% {
+        transform:
+            rotate(0deg)
+            scale(1);
+    }
+}
+
+@keyframes fadeText {
+    0%,
+    100% {
+        opacity: 0.4;
+    }
+
+    50% {
+        opacity: 0.9;
+    }
+}
+
+@keyframes glowMoveOne {
+    0%,
+    100% {
+        transform:
+            translate(0, 0);
+    }
+
+    50% {
+        transform:
+            translate(100px, 80px);
+    }
+}
+
+@keyframes glowMoveTwo {
+    0%,
+    100% {
+        transform:
+            translate(0, 0);
+    }
+
+    50% {
+        transform:
+            translate(-100px, -80px);
+    }
+}
+
+@keyframes gradientText {
+    0% {
+        background-position: 0%;
+    }
+
+    100% {
+        background-position: 300%;
+    }
+}
+
+@keyframes cursorBlink {
+    0%,
+    49% {
+        opacity: 1;
+    }
+
+    50%,
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes flameAnimation {
+    0% {
+        transform:
+            scale(1)
+            rotate(-3deg);
+    }
+
+    100% {
+        transform:
+            scale(1.18)
+            rotate(3deg);
+    }
+}
+
+@keyframes iconFloat {
+    0%,
+    100% {
+        transform:
+            translateY(0);
+    }
+
+    50% {
+        transform:
+            translateY(-8px);
+    }
+}
+
+@keyframes heartbeat {
+    0%,
+    100% {
+        transform:
+            scale(1);
+    }
+
+    50% {
+        transform:
+            scale(1.25);
+    }
+}
+
+@keyframes balloonFloat {
+    0% {
+        transform:
+            translateY(0)
+            rotate(0deg);
+    }
+
+    100% {
+        transform:
+            translateY(-120vh)
+            rotate(15deg);
+    }
+}
+
+@keyframes confettiFall {
+    0% {
+        transform:
+            translateY(0)
+            rotate(0deg);
+
+        opacity: 1;
+    }
+
+    100% {
+        transform:
+            translateY(110vh)
+            rotate(720deg);
+
+        opacity: 0;
+    }
+}
+
+@keyframes questionBoxIn {
+    0% {
+        opacity: 0;
+
+        transform:
+            translateY(50px)
+            scale(0.85);
+    }
+
+    100% {
+        opacity: 1;
+
+        transform:
+            translateY(0)
+            scale(1);
+    }
+}
+
+@keyframes questionEmoji {
+    0%,
+    100% {
+        transform:
+            translateY(0)
+            rotate(0deg)
+            scale(1);
+    }
+
+    50% {
+        transform:
+            translateY(-10px)
+            rotate(5deg)
+            scale(1.08);
+    }
+}
+
+@keyframes iconParty {
+    0%,
+    100% {
+        transform:
+            scale(1);
+    }
+
+    50% {
+        transform:
+            scale(1.12);
+    }
+}
+
+@keyframes byePulse {
+    0%,
+    100% {
+        opacity: 0.55;
+
+        transform:
+            scale(1);
+    }
+
+    50% {
+        opacity: 1;
+
+        transform:
+            scale(1.05);
+    }
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 768px) {
+
+    .birthday-page {
+        padding:
+            30px 20px
+            60px;
+    }
+
+    .wishes {
+        grid-template-columns: 1fr;
+
+        gap: 18px;
+
+        margin:
+            50px 0;
+    }
+
+    .cake {
+        transform:
+            scale(0.82);
+    }
+
+    .message {
+        font-size: 15px;
+    }
+
+    .photo-frame {
+        width: 200px;
+        height: 200px;
+    }
+
+    .balloon {
+        font-size: 35px;
+    }
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 600px) {
+
+    .question-screen {
+        padding: 15px;
+    }
+
+    .question-box {
+        padding:
+            35px 15px;
+
+        max-height:
+            calc(100dvh - 30px);
+
+        overflow: hidden !important;
+    }
+
+    .question-emoji {
+        font-size: 60px;
+    }
+
+    .question-box h1 {
+        font-size: 42px;
+    }
+
+    .question-box p {
+        font-size: 14px;
+    }
+
+    .question-buttons {
+        position: static !important;
+
+        gap: 12px;
+
+        min-height: 150px;
+
+        overflow: visible;
+    }
+
+    .question-buttons button {
+        min-width: 125px;
+
+        padding:
+            13px 18px;
+
+        font-size: 14px;
+    }
+
+
+    /* =====================================
+       MOBILE MOVING BUTTONS
+    ===================================== */
+
+    #partyPlace .question-box,
+    #partyFood .question-box,
+    #partyDrink .question-box {
+        min-height: 400px;
+
+        max-height:
+            calc(100dvh - 30px);
+
+        overflow: hidden !important;
+    }
+
+    #partyPlace #restaurantBtn.restaurant-moving,
+    #partyFood #pizzaBtn.pizza-moving,
+    #partyDrink #whiskyBtn.whisky-moving {
+        position: absolute !important;
+
+        max-width:
+            calc(100% - 30px);
+
+        min-width: 120px;
+
+        padding:
+            13px 18px;
+
+        white-space: nowrap;
+    }
+
+
+    /* =====================================
+       MOBILE NO BUTTON
+    ===================================== */
+
+    .no-btn.no-moving {
+        position: absolute !important;
+
+        max-width:
+            calc(100% - 30px);
+    }
+
+    #noPartyBtn.no-moving {
+        position: absolute !important;
+
+        max-width:
+            calc(100% - 30px);
+    }
+
+
+    /* =====================================
+       MOBILE NEW SCREENS
+    ===================================== */
+
+    #dontLaughScreen .question-box,
+    #mangoScreen .question-box,
+    #byeScreen .question-box {
+        min-height: 400px;
+
+        padding:
+            35px 18px;
+    }
+
+    #dontLaughScreen .question-emoji,
+    #mangoScreen .question-emoji,
+    #byeScreen .question-emoji {
+        font-size: 65px;
+    }
+
+    #dontLaughBtn,
+    #mangoBtn,
+    #goFirstScreenBtn {
+        min-width: 150px;
+    }
+
+    .bye-text {
+        font-size: 16px !important;
+
+        margin-top: 20px !important;
+    }
+
+
+    /* =====================================
+       MOBILE 12 PHOTO GALLERY
+    ===================================== */
+
+    .twelve-photo-gallery {
+        width: 100%;
+
+        margin:
+            35px 0;
+
+        overflow: hidden;
+    }
+
+    .twelve-photo-container {
+        width: 100%;
+
+        display: grid;
+
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+
+        gap: 12px;
+
+        padding:
+            0 8px;
+
+        box-sizing: border-box;
+    }
+
+    .twelve-photo-frame {
+        width: 100%;
+
+        height: 135px;
+
+        padding: 0;
+
+        border-radius: 7px;
+
+        /* IMPORTANT:
+           No separate glow/background layer */
+        background: transparent;
+
+        border:
+            1px solid
+            rgba(255, 56, 184, 0.55);
+
+        box-shadow:
+            0 0 5px
+            rgba(255, 56, 184, 0.15);
+
+        overflow: hidden;
+
+        animation:
+            twelvePhotoGlow
+            3s ease-in-out
+            infinite alternate;
+    }
+
+    .twelve-photo-frame img {
+        width: 100%;
+        height: 100%;
+
+        display: block;
+
+        object-fit: cover;
+
+        border-radius: 6px;
+
+        /* No extra image background */
+        background: transparent;
+
+        transition:
+            transform 0.4s ease;
+    }
+
+    .twelve-photo-frame:hover img {
+        transform: scale(1.03);
+    }
+}
+
+
+/* =========================================
+   SMALL MOBILE
+========================================= */
+
+@media (max-width: 450px) {
+
+    .intro h1 {
+        font-size: 38px;
+    }
+
+    .intro p {
+        font-size: 14px;
+    }
+
+    .gift-box {
+        font-size: 75px;
+    }
+
+    .open-btn {
+        min-width: 210px;
+
+        padding:
+            14px 22px;
+    }
+
+    .birthday-title {
+        font-size: 60px;
+    }
+
+    .name {
+        font-size: 45px;
+    }
+
+    .cake {
+        transform:
+            scale(0.68);
+    }
+
+    .question-box {
+        padding:
+            30px 12px;
+
+        max-height:
+            calc(100dvh - 20px);
+
+        border-radius: 25px;
+    }
+
+    .question-box h1 {
+        font-size: 36px;
+    }
+
+    .question-buttons {
+        position: static !important;
+
+        gap: 8px;
+
+        min-height: 160px;
+
+        overflow: visible;
+    }
+
+    .question-buttons button {
+        min-width: 110px;
+
+        padding:
+            12px 10px;
+
+        font-size: 13px;
+    }
+
+
+    /* =====================================
+       SMALL MOBILE MOVING AREA
+    ===================================== */
+
+    #partyPlace .question-box,
+    #partyFood .question-box,
+    #partyDrink .question-box {
+        min-height: 390px;
+
+        overflow: hidden !important;
+    }
+
+    #partyPlace #restaurantBtn.restaurant-moving,
+    #partyFood #pizzaBtn.pizza-moving,
+    #partyDrink #whiskyBtn.whisky-moving {
+        position: absolute !important;
+
+        min-width: 105px;
+
+        max-width:
+            calc(100% - 24px);
+
+        padding:
+            11px 10px;
+
+        font-size: 13px;
+    }
+
+    .no-btn.no-moving,
+    #noPartyBtn.no-moving {
+        position: absolute !important;
+
+        max-width:
+            calc(100% - 24px);
+
+        min-width: 105px;
+    }
+
+
+    /* =====================================
+       SMALL MOBILE NEW SCREENS
+    ===================================== */
+
+    #dontLaughScreen .question-box,
+    #mangoScreen .question-box,
+    #byeScreen .question-box {
+        min-height: 370px;
+
+        padding:
+            28px 12px;
+    }
+
+    #dontLaughScreen .question-emoji,
+    #mangoScreen .question-emoji,
+    #byeScreen .question-emoji {
+        font-size: 58px;
+    }
+
+    #dontLaughBtn,
+    #mangoBtn,
+    #goFirstScreenBtn {
+        min-width: 135px;
+
+        padding:
+            12px 15px;
+
+        font-size: 13px;
+    }
+
+    .bye-text {
+        font-size: 15px !important;
+    }
+
+
+    /* =====================================
+       SMALL MOBILE 12 PHOTO GALLERY
+    ===================================== */
+
+    .twelve-photo-gallery {
+        margin:
+            30px 0;
+    }
+
+    .twelve-photo-container {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+
+        gap: 10px;
+
+        padding:
+            0 6px;
+    }
+
+    .twelve-photo-frame {
+        height: 120px;
+
+        padding: 0;
+
+        border-radius: 6px;
+
+        border:
+            1px solid
+            rgba(255, 56, 184, 0.50);
+
+        box-shadow:
+            0 0 4px
+            rgba(255, 56, 184, 0.12);
+    }
+
+    .twelve-photo-frame img {
+        border-radius: 5px;
+    }
+}
+
+
+/* =========================================
+   VERY SMALL MOBILE
+========================================= */
+
+@media (max-width: 350px) {
+
+    .question-box {
+        padding:
+            25px 10px;
+    }
+
+    .question-buttons {
+        position: static !important;
+
+        gap: 6px;
+
+        min-height: 165px;
+    }
+
+    .question-buttons button {
+        min-width: 100px;
+
+        padding:
+            11px 8px;
+
+        font-size: 12px;
+    }
+
+    #partyPlace .question-box,
+    #partyFood .question-box,
+    #partyDrink .question-box {
+        min-height: 380px;
+    }
+
+    #partyPlace #restaurantBtn.restaurant-moving,
+    #partyFood #pizzaBtn.pizza-moving,
+    #partyDrink #whiskyBtn.whisky-moving {
+        min-width: 95px;
+
+        max-width:
+            calc(100% - 20px);
+
+        padding:
+            10px 8px;
+
+        font-size: 12px;
+    }
+
+
+    /* =====================================
+       VERY SMALL NEW SCREENS
+    ===================================== */
+
+    #dontLaughScreen .question-box,
+    #mangoScreen .question-box,
+    #byeScreen .question-box {
+        min-height: 350px;
+
+        padding:
+            25px 10px;
+    }
+
+    #dontLaughScreen .question-emoji,
+    #mangoScreen .question-emoji,
+    #byeScreen .question-emoji {
+        font-size: 52px;
+    }
+
+    #dontLaughScreen .question-box h1,
+    #mangoScreen .question-box h1,
+    #byeScreen .question-box h1 {
+        font-size: 32px;
+    }
+
+    #dontLaughBtn,
+    #mangoBtn,
+    #goFirstScreenBtn {
+        min-width: 125px;
+
+        padding:
+            11px 10px;
+
+        font-size: 12px;
+    }
+
+
+    /* =====================================
+       VERY SMALL 12 PHOTO GALLERY
+    ===================================== */
+
+    .twelve-photo-gallery {
+        margin:
+            25px 0;
+    }
+
+    .twelve-photo-container {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+
+        gap: 8px;
+
+        padding:
+            0 5px;
+    }
+
+    .twelve-photo-frame {
+        height: 105px;
+
+        padding: 0;
+
+        border-radius: 5px;
+
+        border:
+            1px solid
+            rgba(255, 56, 184, 0.45);
+
+        box-shadow:
+            0 0 3px
+            rgba(255, 56, 184, 0.10);
+    }
+
+    .twelve-photo-frame img {
+        border-radius: 4px;
+    }
+}
+
+
+/* =========================================
+   FINAL MOVING BUTTON SAFETY
+========================================= */
+
+#partyPlace .question-box,
+#partyFood .question-box,
+#partyDrink .question-box {
+    position: relative !important;
+
+    overflow: hidden !important;
+
+    isolation: isolate;
+}
+
+
+/* =========================================
+   RESTAURANT FINAL SAFETY
+========================================= */
+
+#partyPlace #restaurantBtn.restaurant-moving {
+    position: absolute !important;
+
+    z-index: 9999 !important;
+
+    margin: 0 !important;
+
+    max-width:
+        calc(100% - 30px);
+
+    box-sizing: border-box;
+
+    white-space: nowrap;
+
+    overflow: hidden;
+
+    text-overflow: ellipsis;
+}
+
+
+/* =========================================
+   PIZZA FINAL SAFETY
+========================================= */
+
+#partyFood #pizzaBtn.pizza-moving {
+    position: absolute !important;
+
+    z-index: 9999 !important;
+
+    margin: 0 !important;
+
+    max-width:
+        calc(100% - 30px);
+
+    box-sizing: border-box;
+
+    white-space: nowrap;
+
+    overflow: hidden;
+
+    text-overflow: ellipsis;
+}
+
+
+/* =========================================
+   WHISKY FINAL SAFETY
+========================================= */
+
+#partyDrink #whiskyBtn.whisky-moving {
+    position: absolute !important;
+
+    z-index: 9999 !important;
+
+    margin: 0 !important;
+
+    max-width:
+        calc(100% - 30px);
+
+    box-sizing: border-box;
+
+    white-space: nowrap;
+
+    overflow: hidden;
+
+    text-overflow: ellipsis;
+}
+
+
+/* =========================================
+   NO FINAL SAFETY
+========================================= */
+
+#noPartyBtn.no-moving {
+    position: absolute !important;
+
+    z-index: 9999 !important;
+
+    margin: 0 !important;
+
+    max-width:
+        calc(100% - 30px);
+
+    box-sizing: border-box;
+
+    white-space: nowrap;
+}
+
+
+/* =========================================
+   12 PHOTO GALLERY
+========================================= */
+
+.twelve-photo-gallery {
+    width: 100%;
+
+    margin: 50px 0;
+
+    overflow: hidden;
+}
+
+
+/* =========================================
+   PHOTO CONTAINER
+========================================= */
+
+.twelve-photo-container {
+    width: 100%;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(6, minmax(0, 1fr));
+
+    gap: 14px;
+
+    padding:
+        0 10px;
+
+    box-sizing: border-box;
+}
+
+
+/* =========================================
+   PHOTO FRAME
+========================================= */
+
+.twelve-photo-frame {
+    width: 100%;
+
+    height: 150px;
+
+    box-sizing: border-box;
+
+    /* Removed padding so no extra layer appears */
+    padding: 0;
+
+    border-radius: 8px;
+
+    /* No gradient background layer */
+    background: transparent;
+
+    /* Clean rectangular border */
+    border:
+        1px solid
+        rgba(255, 56, 184, 0.60);
+
+    /* Soft border glow only */
+    box-shadow:
+        0 0 6px
+        rgba(255, 56, 184, 0.18);
+
+    overflow: hidden;
+
+    animation:
+        twelvePhotoGlow
+        3s ease-in-out
+        infinite alternate;
+}
+
+
+/* =========================================
+   IMAGE
+========================================= */
+
+.twelve-photo-frame img {
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+
+    border-radius: 7px;
+
+    /* Removed dark image background layer */
+    background: transparent;
+
+    transition:
+        transform 0.4s ease;
+}
+
+
+/* =========================================
+   HOVER
+========================================= */
+
+.twelve-photo-frame:hover img {
+    transform:
+        scale(1.04);
+}
+
+
+/* =========================================
+   SOFT GLOW ANIMATION
+========================================= */
+
+@keyframes twelvePhotoGlow {
+
+    0% {
+        box-shadow:
+            0 0 4px
+            rgba(255, 56, 184, 0.12);
+    }
+
+    50% {
+        box-shadow:
+            0 0 7px
+            rgba(255, 56, 184, 0.20);
+    }
+
+    100% {
+        box-shadow:
+            0 0 5px
+            rgba(140, 66, 255, 0.16);
+    }
+}
+
+
+/* =========================================
+   GALLERY TABLET
+========================================= */
+
+@media (max-width: 900px) {
+
+    .twelve-photo-container {
+        grid-template-columns:
+            repeat(3, minmax(0, 1fr));
+
+        gap: 12px;
+    }
+
+    .twelve-photo-frame {
+        height: 145px;
+    }
+}
+
+
+/* =========================================
+   GALLERY MOBILE
+========================================= */
+
+@media (max-width: 600px) {
+
+    .twelve-photo-gallery {
+        width: 100%;
+
+        margin:
+            35px 0;
+
+        overflow: hidden;
+    }
+
+    .twelve-photo-container {
+        width: 100%;
+
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+
+        gap: 10px;
+
+        padding:
+            0 7px;
+    }
+
+    .twelve-photo-frame {
+        width: 100%;
+
+        height: 130px;
+
+        padding: 0;
+
+        border-radius: 6px;
+
+        background: transparent;
+
+        border:
+            1px solid
+            rgba(255, 56, 184, 0.50);
+
+        box-shadow:
+            0 0 4px
+            rgba(255, 56, 184, 0.12);
+
+        overflow: hidden;
+    }
+
+    .twelve-photo-frame img {
+        width: 100%;
+        height: 100%;
+
+        border-radius: 5px;
+
+        object-fit: cover;
+
+        background: transparent;
+    }
+}
+
+
+/* =========================================
+   EXTRA SMALL GALLERY MOBILE
+========================================= */
+
+@media (max-width: 450px) {
+
+    .twelve-photo-container {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+
+        gap: 9px;
+
+        padding:
+            0 6px;
+    }
+
+    .twelve-photo-frame {
+        height: 120px;
+
+        border-radius: 6px;
+    }
+
+    .twelve-photo-frame img {
+        border-radius: 5px;
+    }
+}
+
+
+/* =========================================
+   VERY SMALL GALLERY MOBILE
+========================================= */
+
+@media (max-width: 350px) {
+
+    .twelve-photo-container {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+
+        gap: 7px;
+
+        padding:
+            0 5px;
+    }
+
+    .twelve-photo-frame {
+        height: 105px;
+
+        border-radius: 5px;
+    }
+
+    .twelve-photo-frame img {
+        border-radius: 4px;
+    }
+}
+
+
+/* =========================================
+   GIFT / MONEY / CHOCOLATE RAIN SCREEN
+========================================= */
+
+#giftRainScreen {
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100vh;
+    min-height: 100dvh;
+
+    display: none;
+
+    align-items: center;
+    justify-content: center;
+
+    overflow: hidden;
+
+    z-index: 10000;
+
+    background:
+        radial-gradient(
+            circle at 50% 45%,
+            rgba(255, 0, 180, 0.18),
+            transparent 45%
+        ),
+        linear-gradient(
+            135deg,
+            #090014 0%,
+            #170027 50%,
+            #090014 100%
+        );
+}
+
+
+/* =========================================
+   RAIN CONTAINER
+========================================= */
+
+#giftRainContainer {
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    overflow: hidden;
+
+    pointer-events: none;
+
+    z-index: 1;
+}
+
+
+/* =========================================
+   FALLING ITEMS
+========================================= */
+
+.gift-rain-item {
+    position: absolute;
+
+    top: -80px;
+
+    display: block;
+
+    pointer-events: none;
+
+    user-select: none;
+
+    line-height: 1;
+
+    animation-name: giftRainFall;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+
+    filter:
+        drop-shadow(
+            0 4px 6px rgba(0, 0, 0, 0.35)
+        );
+}
+
+
+/* =========================================
+   FALLING ANIMATION
+========================================= */
+
+@keyframes giftRainFall {
+
+    0% {
+        transform:
+            translateY(-100px)
+            rotate(0deg);
+
+        opacity: 0;
+    }
+
+    10% {
+        opacity: 1;
+    }
+
+    50% {
+        transform:
+            translateY(50vh)
+            rotate(180deg);
+    }
+
+    100% {
+        transform:
+            translateY(115vh)
+            rotate(360deg);
+
+        opacity: 0.9;
+    }
+}
+
+
+/* =========================================
+   CONTENT BOX
+========================================= */
+
+.gift-rain-content {
+    position: relative;
+
+    z-index: 5;
+
+    width: 90%;
+    max-width: 580px;
+
+    padding: 30px 22px;
+
+    text-align: center;
+
+    border-radius: 28px;
+
+    background:
+        rgba(20, 0, 35, 0.88);
+
+    border:
+        1px solid rgba(255, 255, 255, 0.15);
+
+    box-shadow:
+        0 0 40px rgba(255, 0, 180, 0.22);
+
+    backdrop-filter: blur(8px);
+}
+
+
+/* =========================================
+   EMOJI
+========================================= */
+
+.gift-rain-emoji {
+    font-size: 48px;
+
+    line-height: 1;
+
+    margin-bottom: 15px;
+
+    animation:
+        giftEmojiBounce 1.5s ease-in-out infinite;
+}
+
+
+@keyframes giftEmojiBounce {
+
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-8px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+
+/* =========================================
+   HEADING
+========================================= */
+
+.gift-rain-content h1 {
+    margin: 10px 0 15px;
+
+    font-family:
+        "Dancing Script",
+        cursive;
+
+    font-size: 40px;
+
+    font-weight: 700;
+
+    line-height: 1.2;
+
+    color: #ffffff;
+
+    text-shadow:
+        0 0 15px rgba(255, 100, 220, 0.7);
+}
+
+
+/* =========================================
+   DESCRIPTION
+========================================= */
+
+.gift-rain-content > p {
+    margin: 0 auto 18px;
+
+    font-family:
+        "Poppins",
+        sans-serif;
+
+    font-size: 15px;
+
+    line-height: 1.7;
+
+    color: #f4ddff;
+}
+
+
+/* =========================================
+   MESSAGE
+========================================= */
+
+.gift-rain-message {
+    margin: 18px 0 25px;
+
+    padding: 13px 15px;
+
+    border-radius: 16px;
+
+    background:
+        rgba(255, 255, 255, 0.06);
+
+    color: #ffffff;
+
+    font-family:
+        "Poppins",
+        sans-serif;
+
+    font-size: 13px;
+
+    line-height: 1.6;
+}
+
+
+/* =========================================
+   NEXT BUTTON
+========================================= */
+
+#giftRainNextBtn {
+    position: relative;
+
+    z-index: 10;
+
+    display: inline-block;
+
+    padding: 13px 26px;
+
+    border: none;
+
+    border-radius: 50px;
+
+    outline: none;
+
+    cursor: pointer;
+
+    font-family:
+        "Poppins",
+        sans-serif;
+
+    font-size: 15px;
+
+    font-weight: 600;
+
+    color: #ffffff;
+
+    background:
+        linear-gradient(
+            135deg,
+            #ff3cac,
+            #784ba0
+        );
+
+    box-shadow:
+        0 8px 25px rgba(255, 60, 172, 0.35);
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+
+#giftRainNextBtn:hover {
+    transform:
+        translateY(-3px);
+
+    box-shadow:
+        0 12px 30px rgba(255, 60, 172, 0.5);
+}
+
+
+#giftRainNextBtn:active {
+    transform:
+        scale(0.95);
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 600px) {
+
+    #giftRainScreen {
+        padding: 15px;
+    }
+
+
+    .gift-rain-content {
+        width: 94%;
+
+        padding: 25px 17px;
+
+        border-radius: 24px;
+    }
+
+
+    .gift-rain-emoji {
+        font-size: 42px;
+    }
+
+
+    .gift-rain-content h1 {
+        font-size: 31px;
+    }
+
+
+    .gift-rain-content > p {
+        font-size: 14px;
+    }
+
+
+    .gift-rain-message {
+        font-size: 12px;
+
+        padding: 12px;
+    }
+
+
+    #giftRainNextBtn {
+        padding: 12px 23px;
+
+        font-size: 14px;
+    }
+
+
+    .gift-rain-item {
+        font-size: 30px;
+    }
+}
+
+
+
+/* =================================
+   BEAUTIFUL MEMORIES HEADING
+================================= */
+
+.memories-heading {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.memories-heading h2 {
+    margin: 0;
+    font-size: 32px;
+    font-weight: 700;
+    color: #ffffff;
+    letter-spacing: 1px;
+    text-shadow:
+        0 0 10px rgba(255, 105, 180, 0.7),
+        0 0 25px rgba(180, 80, 255, 0.5);
+}
+
+.memories-heading p {
+    margin-top: 8px;
+    font-size: 14px;
+    color: #cba6ff;
+}
+
+/* MOBILE */
+
+@media (max-width: 600px) {
+
+    .memories-heading {
+        margin-bottom: 22px;
+    }
+
+    .memories-heading h2 {
+        font-size: 26px;
+    }
+
+    .memories-heading p {
+        font-size: 13px;
+    }
+}
